@@ -1,0 +1,237 @@
+/* General */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Lato',sans-serif;}
+body{scroll-behavior:smooth;background:#fff;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* Navigation */
+nav{width:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);color:#fff;z-index:1000;transition:0.3s;}
+nav .container{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;}
+nav .logo{font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;}
+nav ul{list-style:none;display:flex;gap:2rem;}
+nav ul li a{color:#fff;font-weight:600;transition:0.3s;}
+nav ul li a:hover{color:#fdd835;}
+nav .menu-toggle{display:none;cursor:pointer;font-size:1.5rem;}
+
+/* Header */
+header{height:100vh;background:url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;padding:0 1rem;animation:fadeIn 1.2s ease-in-out;}
+header h1{font-family:'Playfair Display', serif;font-size:3rem;margin-bottom:1rem;text-shadow:2px 2px 8px #000;animation:slideDown 1s ease;}
+header p{font-size:1.2rem;margin-bottom:2rem;text-shadow:1px 1px 6px #000;animation:slideUp 1s ease;}
+header a{padding:0.8rem 2rem;background:#fdd835;color:#000;font-weight:700;border-radius:50px;transition:0.3s transform, 0.3s background;}
+header a:hover{background:#fff; transform:scale(1.1);}
+
+/* Sections */
+section{padding:5rem 1rem;opacity:0; transform:translateY(20px); transition:1s;}
+section.visible{opacity:1; transform:translateY(0);}
+h2{font-family:'Playfair Display', serif;font-size:2.5rem;text-align:center;margin-bottom:2rem;color:#333;}
+p{color:#555;text-align:center;margin-bottom:2rem;}
+
+/* About */
+#about .content{display:flex;flex-wrap:wrap;align-items:center;gap:2rem;justify-content:center;}
+#about .content img{width:400px;border-radius:10px;transition:transform 0.3s;}
+#about .content img:hover{transform:scale(1.05);}
+#about .content div{max-width:500px;}
+
+/* Menu Flip Card */
+#menuImageContainer{display:flex;justify-content:center;margin-top:2rem;flex-wrap:wrap;gap:1rem;}
+.flip-card{background-color:transparent;width:300px;height:300px;perspective:1000px;cursor:pointer;transition:transform 0.3s;}
+.flip-card:hover{transform:scale(1.05);}
+.flip-card-inner{position:relative;width:100%;height:100%;transition:transform 0.8s;transform-style:preserve-3d;border-radius:10px;}
+.flip-card.flipped .flip-card-inner{transform:rotateY(180deg);}
+.flip-card-front, .flip-card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:10px;}
+.flip-card-back{transform:rotateY(180deg);}
+.flip-card-front img, .flip-card-back img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* Buttons */
+#bookTableBtn, #contactBtn {
+  padding: 0.8rem 2rem;
+  background: #fdd835;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s transform, 0.3s background;
+  display: inline-block;
+  margin: 1rem auto;
+}
+#bookTableBtn:hover, #contactBtn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+/* Reservation / Booking Form /
+#reservation {
+padding: 5rem 1rem;
+background: #f9f9f9;
+display: none; / hidden initially */
+}
+#reservation h2{text-align:center; margin-bottom:2rem;}
+#bookingForm {
+  max-width:600px; margin:0 auto;
+  display:flex; flex-direction:column; gap:1rem;
+}
+#bookingForm input, #bookingForm select, #bookingForm textarea {
+  padding:0.8rem; border-radius:5px; border:1px solid #ccc; transition:0.3s;
+}
+#bookingForm input:focus, #bookingForm select:focus, #bookingForm textarea:focus {
+  border-color:#fdd835; outline:none;
+}
+#bookingForm button {
+  padding:0.8rem; background:#fdd835; color:#000; font-weight:700;
+  border:none; border-radius:50px; cursor:pointer;
+  transition:0.3s transform, 0.3s background;
+}
+#bookingForm button:hover {
+  background:#fff; transform:scale(1.05);
+}
+
+/* Contact Form /
+#contact {
+display: none; / hidden initially */
+}
+#contact form {
+  max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;
+}
+#contact input, #contact textarea {
+  padding:0.8rem; border-radius:5px; border:1px solid #ccc; transition:0.3s;
+}
+#contact input:focus, #contact textarea:focus {
+  border-color:#fdd835; outline:none;
+}
+#contact button {
+  padding:0.8rem; background:#fdd835; color:#000; font-weight:700;
+  border:none; border-radius:50px; cursor:pointer;
+  transition:0.3s transform, 0.3s background;
+}
+#contact button:hover {
+  background:#fff; transform:scale(1.05);
+}
+
+/* Gallery */
+#gallery .gallery-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+#gallery .gallery-item {
+  width:100%; aspect-ratio:1/1; overflow:hidden; border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+#gallery .gallery-item img {
+  width:100%; height:100%; object-fit:cover; display:block;
+  transition: transform 0.4s;
+}
+#gallery .gallery-item:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Visit Us Button */
+.visit-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #fdd835;
+  color: #000;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.visit-btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background:#222; color:#fff; padding:2rem 0; text-align:center;
+}
+footer a {
+  color:#fdd835; margin:0 0.5rem; font-weight:600;
+}
+
+/* WhatsApp Floating Button */
+#whatsappButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+  cursor: grab;
+  transition: transform 0.3s;
+}
+#whatsappButton:hover {
+  transform:scale(1.1) rotate(-10deg);
+}
+#whatsappButton img {
+  width:100%; height:100%;
+}
+
+/* Responsive */
+@media(max-width:1024px){
+  #about .content img{width:300px;}
+  #about .content div{max-width:400px;}
+  .flip-card{width:250px;height:250px;}
+}
+@media(max-width:768px){
+  nav ul{display:none;flex-direction:column;background:rgba(0,0,0,0.9);position:absolute;top:60px;right:0;width:200px;padding:1rem;border-radius:0 0 0 10px;}
+  nav ul.show{display:flex;}
+  nav .menu-toggle{display:block;}
+  #about .content{flex-direction:column;}
+  #gallery .gallery-items{grid-template-columns:1fr;}
+  header h1{font-size:2.2rem;}
+  header p{font-size:1rem;}
+  .flip-card{width:200px;height:200px;}
+}
+@media(max-width:480px){
+  header h1{font-size:1.8rem;}
+  header p{font-size:0.9rem;}
+  #about .content img{width:100%; max-width:280px;}
+  #about .content div{max-width:100%;}
+}
+
+/* Animations */
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes slideDown{from{transform:translateY(-30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+
+/* === ALERT SYSTEM === */
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  background-color: #fdd835;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.alert.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert.success {
+  background-color: #4caf50; /* Green */
+  color: #fff;
+}
+
+.alert.error {
+  background-color: #f44336; /* Red */
+  color: #fff;
+}
+
+.alert.info {
+  background-color: #2196f3; /* Blue */
+  color: #fff;
+}
