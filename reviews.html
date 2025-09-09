@@ -5,6 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Customer Reviews – Rana Khana Khajana</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reviews Section */
+    #reviews {
+      padding: 80px 20px 40px;
+      background: #fdf6f0;
+      text-align: center;
+    }
+
+    #reviews h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    /* Grid Layout */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    /* Review Card */
+    .review-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px 20px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .reviewer-pic img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+      border: 3px solid #e67e22;
+    }
+
+    .review-card h3 {
+      font-size: 1.2rem;
+      color: #e67e22;
+      margin-bottom: 8px;
+    }
+
+    .stars {
+      color: #f1c40f;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .review-card p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    footer a {
+      color: #e67e22;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* WhatsApp Button */
+    #whatsappButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      z-index: 100;
+    }
+
+    #whatsappButton img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    #whatsappButton img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      #reviews h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -18,7 +133,7 @@
       <li><a href="menu.html">Menu</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="table.html">Book Table</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -29,21 +144,44 @@
 <section id="reviews">
   <div class="container">
     <h2>What Our Customers Say</h2>
-    <div class="review">
-      <h3>Rahul Sharma</h3>
-      <p>"Excellent food and great hospitality. Their paneer butter masala is a must-try!"</p>
-    </div>
-    <div class="review">
-      <h3>Anjali Mehra</h3>
-      <p>"Felt like home. Clean place, polite staff, and delicious food."</p>
-    </div>
-    <div class="review">
-      <h3>Vikram Rajput</h3>
-      <p>"Affordable and authentic. Truly a hidden gem in Delhi!"</p>
-    </div>
-    <div class="review">
-      <h3>Simran Kaur</h3>
-      <p>"The best biryani I’ve had in a long time. Will visit again for sure!"</p>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="reviewer-pic">
+          <img src="https://i.pravatar.cc/100?img=5" alt="Rahul Sharma">
+        </div>
+        <h3>Rahul Sharma</h3>
+        <div class="stars">★★★★★</div>
+        <p>"Excellent food and great hospitality. Their paneer butter masala is a must-try!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer-pic">
+          <img src="https://i.pravatar.cc/100?img=12" alt="Anjali Mehra">
+        </div>
+        <h3>Anjali Mehra</h3>
+        <div class="stars">★★★★☆</div>
+        <p>"Felt like home. Clean place, polite staff, and delicious food."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer-pic">
+          <img src="https://i.pravatar.cc/100?img=8" alt="Vikram Rajput">
+        </div>
+        <h3>Vikram Rajput</h3>
+        <div class="stars">★★★★★</div>
+        <p>"Affordable and authentic. Truly a hidden gem in Delhi!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer-pic">
+          <img src="https://i.pravatar.cc/100?img=20" alt="Simran Kaur">
+        </div>
+        <h3>Simran Kaur</h3>
+        <div class="stars">★★★★★</div>
+        <p>"The best biryani I’ve had in a long time. Will visit again for sure!"</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -61,4 +199,4 @@
 
 <script src="script.js"></script>
 </body>
-</html>
+    </html>
