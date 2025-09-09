@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About – Rana Khana Khajana</title>
-  <style>
-    /* Same styling as index page */
-    * {margin:0;padding:0;box-sizing:border-box;font-family:'Lato',sans-serif;}
-    body {background:#fff8f0;padding-top:70px;}
-    nav {position:fixed;top:0;width:100%;background:#c0392b;padding:15px;text-align:center;}
-    nav a {color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;}
-    nav a:hover {text-decoration:underline;}
-    section {padding:40px 20px;max-width:900px;margin:auto;}
-    h1 {color:#c0392b;margin-bottom:20px;}
-    p {line-height:1.6;font-size:1.1em;}
-    img {width:100%;margin-top:20px;border-radius:10px;}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Rana Khana Khajana</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="menu.html">Menu</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="booking.html">Book Table</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="chef.html">Chef</a>
-    <a href="location.html">Location</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
-  <section>
-    <h1>About Rana Khana Khajana</h1>
-    <p>Established in 2020, Rana Khana Khajana is a family-run restaurant where flavor meets tradition. We believe in serving food that not only fills your stomach but also your heart.</p>
-    <img src="images/about.jpg" alt="Our Restaurant Story">
-  </section>
+<!-- Navigation -->
+<nav>
+  <div class="container">
+    <div class="logo">Rana Khana Khajana</div>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="booking.html">Book Table</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="chef.html">Chef</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>
 
-  <script>
-    // Placeholder for future JS
-  </script>
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <div class="content">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="About Us">
+      <div>
+        <p>Rana Khana Khajana ek family-run restaurant hai jahan aapko milta hai ghar jaisa swaad, royal hospitality ke saath. Humare chef Rana ji har dish ko banate hain apne dil se – taaki har plate ho ek yaadgar anubhav.</p>
+        <p>2020 se hum serve kar rahe hain Delhi ke logon ko pure desi taste ke saath. Aaiye, ek baar khaakar dekh lijiye!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Rana Khana Khajana | Follow us:</p>
+  <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919646777700" target="_blank" id="whatsappButton">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
