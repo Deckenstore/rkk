@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Menu – Rana Khana Khajana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="container">
+    <div class="logo">Rana Khana Khajana</div>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="booking.html">Book Table</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="chef.html">Chef</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>
+
+<!-- Menu Section -->
+<section id="menu">
+  <div class="container">
+    <h2>Our Menu</h2>
+    <div id="menuImageContainer">
+      <div class="flip-card" id="flipCard">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Png.jpg" alt="Dish Front" />
+          </div>
+          <div class="flip-card-back">
+            <img src="Dish2.jpg" alt="Dish Back" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book Table Button -->
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="booking.html"><button id="bookTableBtn">Book a Table</button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Rana Khana Khajana | Follow us:</p>
+  <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919646777700" target="_blank" id="whatsappButton">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
