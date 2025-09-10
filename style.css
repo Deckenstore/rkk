@@ -269,3 +269,35 @@ footer a {
   font-size: 16px;
   color: #555;
   }
+  /* Fancy Horizontal Line Between Buttons */
+.custom-line {
+  border: none;
+  height: 5mm;
+  background: linear-gradient(to right, #fdd835, #ff6b6b, #fdd835);
+  border-radius: 10px;
+  width: 80%;
+  margin: 3rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Improved Buttons (Book Table + Contact) */
+#bookTableBtn, #contactBtn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #fdd835, #ff6b6b);
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  display: inline-block;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+#bookTableBtn:hover, #contactBtn:hover {
+  background: linear-gradient(135deg, #fff176, #ff8a65);
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+                      }
