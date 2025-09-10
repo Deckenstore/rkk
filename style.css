@@ -284,7 +284,7 @@ footer a {
 /* Improved Buttons (Book Table + Contact) */
 #bookTableBtn, #contactBtn {
   padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, #fdd835, #ff6b6b);
+  background: linear-gradient(135deg, #fdd835 );
   color: #000;
   font-weight: 700;
   font-size: 1.1rem;
@@ -297,7 +297,7 @@ footer a {
 }
 
 #bookTableBtn:hover, #contactBtn:hover {
-  background: linear-gradient(135deg, #fff176, #ff8a65);
+  background: linear-gradient(135deg, #fff176 );
   transform: scale(1.07);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
                       }
