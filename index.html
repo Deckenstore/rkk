@@ -93,17 +93,20 @@
   <div class="container">
     <h2>Our Menu</h2>
     <div id="menuImageContainer">
-      <div class="flip-card" id="flipCard">
+      <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="menu1.jpg" alt="Dish 1">
+            <img class="zoomable" src="menu1.jpg" alt="Dish 1">
           </div>
           <div class="flip-card-back">
-            <img src="menu1.jpg" alt="Dish 2">
+            <img class="zoomable" src="menu1.jpg" alt="Dish 2">
           </div>
         </div>
       </div>
+      <!-- Add more flip-cards similarly -->
     </div>
+  </div>
+</section>
 
     <!-- Book Table Button -->
     <div style="text-align:center; margin-top:2rem;">
@@ -179,6 +182,12 @@
     <a href="contact.html">Contact Us</a>
   </div>
 </footer>
+  
+  <!-- Add this popup container at end of body -->
+<div id="zoomPopup" class="hidden">
+  <span id="closeZoom">&times;</span>
+  <img id="popupImage" src="" alt="Zoomed Image">
+</div>
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/919646777700" target="_blank" id="whatsappButton">
