@@ -194,6 +194,38 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
 </a>
 
+  <script>
+  const zoomImages = document.querySelectorAll('.zoomable');
+  const zoomPopup = document.getElementById('zoomPopup');
+  const popupImage = document.getElementById('popupImage');
+  const closeZoom = document.getElementById('closeZoom');
+
+  zoomImages.forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent flip-card flip on click
+      popupImage.src = img.src;
+      zoomPopup.classList.remove('hidden');
+    });
+  });
+
+  closeZoom.addEventListener('click', () => {
+    zoomPopup.classList.add('hidden');
+  });
+
+  zoomPopup.addEventListener('click', (e) => {
+    if (e.target === zoomPopup) {
+      zoomPopup.classList.add('hidden');
+    }
+  });
+
+  // Optional: ESC key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+      zoomPopup.classList.add('hidden');
+    }
+  });
+  </script>
+
 <!-- Scripts -->
 <script src="script.js"></script>
 </body>
