@@ -30,17 +30,20 @@
   <div class="container">
     <h2>Our Menu</h2>
     <div id="menuImageContainer">
-      <div class="flip-card" id="flipCard">
+      <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="menu1.jpg" alt="Dish Front" />
+            <img class="zoomable" src="menu1.jpg" alt="Dish 1">
           </div>
           <div class="flip-card-back">
-            <img src="menu1.jpg" alt="Dish Back" />
+            <img class="zoomable" src="menu1.jpg" alt="Dish 2">
           </div>
         </div>
       </div>
+      <!-- Add more flip-cards similarly -->
     </div>
+  </div>
+</section>
 
     <!-- Book Table Button -->
     <div style="text-align:center; margin-top:2rem;">
@@ -55,11 +58,49 @@
   <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a>
 </footer>
 
+  <!-- Add this popup container at end of body -->
+<div id="zoomPopup" class="hidden">
+  <span id="closeZoom">&times;</span>
+  <img id="popupImage" src="" alt="Zoomed Image">
+</div>
+
 <!-- WhatsApp Button -->
 <a href="https://wa.me/919646777700" target="_blank" id="whatsappButton">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
 </a>
 
+  <script>
+  const zoomImages = document.querySelectorAll('.zoomable');
+  const zoomPopup = document.getElementById('zoomPopup');
+  const popupImage = document.getElementById('popupImage');
+  const closeZoom = document.getElementById('closeZoom');
+
+  zoomImages.forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent flip-card flip on click
+      popupImage.src = img.src;
+      zoomPopup.classList.remove('hidden');
+    });
+  });
+
+  closeZoom.addEventListener('click', () => {
+    zoomPopup.classList.add('hidden');
+  });
+
+  zoomPopup.addEventListener('click', (e) => {
+    if (e.target === zoomPopup) {
+      zoomPopup.classList.add('hidden');
+    }
+  });
+
+  // Optional: ESC key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+      zoomPopup.classList.add('hidden');
+    }
+  });
+        </script>
+  
 <script src="script.js"></script>
 </body>
 </html>
